@@ -1,0 +1,452 @@
+{
+  "type": "object",
+  "properties": {
+    "time": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "NBAClockFeed": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "feedType": {
+          "type": "string"
+        },
+        "gameClockTime": {
+          "type": "string"
+        },
+        "gameClockRunning": {
+          "type": "boolean"
+        },
+        "breakTime": {
+          "type": "string"
+        },
+        "timeOutTime": {
+          "type": "string"
+        },
+        "shotClockTime": {
+          "type": "string"
+        },
+        "shotClockRunning": {
+          "type": "boolean"
+        },
+        "period": {
+          "type": "string"
+        },
+        "periodType": {
+          "type": "integer"
+        },
+        "scoreHome": {
+          "type": "integer"
+        },
+        "scoreAway": {
+          "type": "integer"
+        },
+        "fullTOLeftHome": {
+          "type": "integer"
+        },
+        "fullTOLeftAway": {
+          "type": "integer"
+        },
+        "shortTOLeftHome": {
+          "type": "integer"
+        },
+        "shortTOLeftAway": {
+          "type": "integer"
+        },
+        "foulsHome": {
+          "type": "integer"
+        },
+        "foulsAway": {
+          "type": "integer"
+        },
+        "shortNameHome": {
+          "type": "string"
+        },
+        "shortNameAway": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "version",
+        "feedType",
+        "gameClockTime",
+        "gameClockRunning",
+        "breakTime",
+        "timeOutTime",
+        "shotClockTime",
+        "shotClockRunning",
+        "period",
+        "periodType",
+        "scoreHome",
+        "scoreAway",
+        "fullTOLeftHome",
+        "fullTOLeftAway",
+        "shortTOLeftHome",
+        "shortTOLeftAway",
+        "foulsHome",
+        "foulsAway",
+        "shortNameHome",
+        "shortNameAway"
+      ],
+      "additionalProperties": false
+    },
+    "ballFrameData": {
+      "type": "object",
+      "properties": {
+        "position": {
+          "type": "string"
+        },
+        "heightOfGround": {
+          "type": "number"
+        },
+        "frameDistance": {
+          "type": "number"
+        },
+        "frameSpeed": {
+          "type": "number"
+        },
+        "instantaneousVelocity": {
+          "type": "string"
+        },
+        "ballInBounds": {
+          "type": "boolean"
+        },
+        "possessionTeamId": {
+          "type": "integer"
+        },
+        "possessionJerseyNumber": {
+          "type": "string"
+        },
+        "pitchRegion": {
+          "type": "string"
+        },
+        "leftBoundary": {
+          "type": "string"
+        },
+        "rightBoundary": {
+          "type": "string"
+        },
+        "precision": {
+          "type": "integer"
+        },
+        "ballTrackingInferred": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "position",
+        "heightOfGround",
+        "frameDistance",
+        "frameSpeed",
+        "instantaneousVelocity",
+        "ballInBounds",
+        "possessionTeamId",
+        "possessionJerseyNumber",
+        "pitchRegion",
+        "leftBoundary",
+        "rightBoundary",
+        "precision",
+        "ballTrackingInferred"
+      ],
+      "additionalProperties": false
+    },
+    "basketballFrameData": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "precision": {
+          "type": "integer"
+        },
+        "playerStats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trackId": {
+                "type": "integer"
+              },
+              "onCourtStatus": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "trackId",
+              "onCourtStatus"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "basketStats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "posX": {
+                "type": "boolean"
+              },
+              "rimRadius": {
+                "type": "number"
+              },
+              "rimThickness": {
+                "type": "number"
+              },
+              "basketCentre": {
+                "type": "string"
+              },
+              "basketNormal": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "posX",
+              "rimRadius",
+              "rimThickness",
+              "basketCentre",
+              "basketNormal"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "officiatingMetrics": {
+          "type": "object",
+          "properties": {
+            "ballTravellingDown": {
+              "type": "boolean"
+            },
+            "hasChanceToScore": {
+              "type": "boolean"
+            },
+            "lastTouchTeamId": {
+              "type": "integer"
+            },
+            "lastTouchJerseyNumber": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ballTravellingDown",
+            "hasChanceToScore",
+            "lastTouchTeamId",
+            "lastTouchJerseyNumber"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "version",
+        "precision",
+        "playerStats",
+        "basketStats",
+        "officiatingMetrics"
+      ],
+      "additionalProperties": false
+    },
+    "personFrameData": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "skeletons": {
+          "type": "object",
+          "properties": {
+            "COCO_29": {
+              "type": "object",
+              "properties": {
+                "connections": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "connections"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "COCO_29"
+          ],
+          "additionalProperties": false
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trackId": {
+                "type": "integer"
+              },
+              "jointIds": {
+                "type": "string"
+              },
+              "positions": {
+                "type": "string"
+              },
+              "centerOfMass": {
+                "type": "string"
+              },
+              "heightOfGround": {
+                "type": "number"
+              },
+              "skeletonType": {
+                "type": "string"
+              },
+              "detailedSkeletonType": {
+                "type": "string"
+              },
+              "poseScore": {
+                "type": "number"
+              },
+              "teamId": {
+                "type": "integer"
+              },
+              "roleId": {
+                "type": "integer"
+              },
+              "jerseyNumber": {
+                "type": "string"
+              },
+              "frameDistance": {
+                "type": "number"
+              },
+              "frameSpeed": {
+                "type": "number"
+              },
+              "frameVelocity": {
+                "type": "string"
+              },
+              "speed": {
+                "type": "number"
+              },
+              "velocity": {
+                "type": "string"
+              },
+              "acceleration": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "trackId",
+              "jointIds",
+              "positions",
+              "centerOfMass",
+              "heightOfGround",
+              "skeletonType",
+              "detailedSkeletonType",
+              "poseScore",
+              "teamId",
+              "roleId",
+              "jerseyNumber",
+              "frameDistance",
+              "frameSpeed",
+              "frameVelocity",
+              "speed",
+              "velocity",
+              "acceleration"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "teams": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "precision": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "version",
+        "skeletons",
+        "people",
+        "teams",
+        "roles",
+        "precision"
+      ],
+      "additionalProperties": false
+    },
+    "systemFrameData": {
+      "type": "object",
+      "properties": {
+        "time": {
+          "type": "integer"
+        },
+        "version": {
+          "type": "integer"
+        },
+        "precision": {
+          "type": "integer"
+        },
+        "targetFPS": {
+          "type": "number"
+        },
+        "pitchModelHash": {
+          "type": "integer"
+        },
+        "gameActive": {
+          "type": "boolean"
+        },
+        "teamAIsPositiveHalf": {
+          "type": "boolean"
+        },
+        "isMaster": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "time",
+        "version",
+        "precision",
+        "targetFPS",
+        "pitchModelHash",
+        "gameActive",
+        "teamAIsPositiveHalf",
+        "isMaster"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "time",
+    "version",
+    "NBAClockFeed",
+    "ballFrameData",
+    "basketballFrameData",
+    "personFrameData",
+    "systemFrameData"
+  ],
+  "additionalProperties": false
+}
